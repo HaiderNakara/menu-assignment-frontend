@@ -49,7 +49,7 @@ function MenuTreeItem({
     const newItem = await addNewItemHook({
       name: "New Item in " + item.name,
       parentId: item.id,
-      depth: item.depth + 1,
+      depth: item.depth ?? 0 + 1,
       children: [],
     }).unwrap();
     dispatch(
@@ -57,7 +57,7 @@ function MenuTreeItem({
         id: newItem.id ?? "",
         name: "New Item in " + item.name,
         parentId: item.id,
-        depth: item.depth + 1,
+        depth: item.depth ?? 0 + 1,
         selected: true,
       })
     );
@@ -145,7 +145,7 @@ export function MenuTree() {
           </SelectTrigger>
           <SelectContent>
             {menuItems.map((item) => (
-              <SelectItem key={item.id} value={item.id}>
+              <SelectItem key={item.id} value={item.id ?? ""}>
                 {item.name}
               </SelectItem>
             ))}

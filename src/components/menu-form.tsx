@@ -41,7 +41,7 @@ export function MenuForm() {
       await updateMenuItemHook({
         id: selectedItem.id,
         name: formData.name,
-      } as any);
+      });
       dispatch(
         updateMenuItem({
           id: selectedItem.id,
@@ -56,7 +56,7 @@ export function MenuForm() {
         depth: formData.depth,
         parentId: formData.parentId,
         children: [],
-      } as any).unwrap();
+      }).unwrap();
       dispatch(
         addMenuItem({
           id: newItem.id ?? "",

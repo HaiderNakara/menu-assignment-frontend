@@ -1,10 +1,10 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 export interface MenuItem {
-  id: string;
+  id?: string;
   name: string;
-  parentId: string | null;
-  depth: number;
+  parentId?: string | null;
+  depth?: number;
   children?: MenuItem[];
   selected?: boolean;
 }
@@ -81,7 +81,7 @@ export const menuSlice = createSlice({
         return undefined;
       };
 
-      const value = findItem(state.items, action.payload.id);
+      const value = findItem(state.items, action.payload.id ?? "");
       if (value) {
         value.name = action.payload.name;
         value.depth = action.payload.depth;

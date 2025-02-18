@@ -22,7 +22,7 @@ export default function MenusPage() {
 
   useEffect(() => {
     if (data) {
-      dispatch(setMenuItems(data as any));
+      dispatch(setMenuItems(data));
     }
   }, [dispatch, data]);
 
@@ -79,7 +79,6 @@ export default function MenusPage() {
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">
-                {/* file icon */}
                 <Folder className="h-4 w-4" />
               </BreadcrumbLink>
             </BreadcrumbItem>

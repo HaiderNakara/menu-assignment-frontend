@@ -33,7 +33,7 @@ const navigation = {
 
 export function AppSidebar() {
   const pathname = usePathname();
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed] = useState(false);
 
   return (
     <div

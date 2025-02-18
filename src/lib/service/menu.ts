@@ -4,9 +4,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export type MenuItem = {
   id?: string;
   name: string;
-  parentId: string | null;
-  depth: number;
-  children: MenuItem[];
+  parentId?: string | null;
+  depth?: number;
+  children?: MenuItem[];
 };
 
 export const menuApi = createApi({
