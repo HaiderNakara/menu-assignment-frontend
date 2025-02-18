@@ -1,19 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { MenuTree } from "@/components/menu-tree";
 import { MenuForm } from "@/components/menu-form";
-import { setMenuItems } from "@/lib/store/menu-slice";
+import { MenuTree } from "@/components/menu-tree";
 import {
   Breadcrumb,
-  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { File, Folder } from "lucide-react";
+import { setMenuItems } from "@/lib/store/menu-slice";
+import { Folder } from "lucide-react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import Title from "./components/Title";
 // Sample data - replace with API call
 const sampleData = [
   {
@@ -72,10 +72,16 @@ export default function MenusPage() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
+
       <div className="grid grid-cols-[1fr,300px] h-[calc(100vh-5rem)]">
-        <MenuTree />
-        <div className="border-l">
-          <MenuForm />
+        <div>
+          <Title />
+          <div className="grid grid-cols-2">
+            <MenuTree />
+            <div className="border-l">
+              <MenuForm />
+            </div>
+          </div>
         </div>
       </div>
     </div>
