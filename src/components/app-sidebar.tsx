@@ -22,7 +22,7 @@ const navigation = {
     { name: "Systems", href: "/systems", icon: LayoutGrid },
     { name: "System Code", href: "/system-code", icon: Code2 },
     { name: "Properties", href: "/properties", icon: Settings2 },
-    { name: "Menus", href: "/menus", icon: Menu },
+    { name: "Menus", href: "/", icon: Menu },
     { name: "API List", href: "/api-list", icon: FileJson },
   ],
   sub_items: [

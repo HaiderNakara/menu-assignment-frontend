@@ -3,16 +3,12 @@ import { Grid2X2 } from "lucide-react";
 export default function Title() {
   return (
     <div
-      className="flex items-center gap-3 m-4 ml-8"
+      className="flex items-center gap-3 p-4"
       style={{
         width: "1176px",
         height: "84px",
         top: "108px",
         left: "264px",
-        paddingTop: "16px",
-        paddingRight: "48px",
-        paddingBottom: "16px",
-        paddingLeft: "48px",
       }}
     >
       <div className="flex items-center justify-center rounded-full bg-[#253bff] p-2 text-white">
